@@ -6,7 +6,8 @@ var path = require('path')
 var axios = require('axios')
 var WEB_API = 'https://jobtotalwebapi.azurewebsites.net/api'
 if(process){
-  WEB_API = process.env.WEB_API
+  if(process.env.WEB_API)
+    WEB_API = process.env.WEB_API
 }
 // var WEB_API = 'https://jobtotalwebapi.azurewebsites.net/api'
 var server = require('http').createServer(app)
@@ -14,7 +15,8 @@ var io = require('socket.io')(server)
 // var port = process.env.PORT || 3000
 var port = 3000
 if(process){
-  port = process.env.PORT
+  if(process.env.PORT)
+    port = process.env.PORT
 }
 
 server.listen(port, () => {
@@ -40,7 +42,8 @@ io.on('connection', (socket) => {
   // var connectionString = process.env.SQLCONNSTR_JobTotalDev || localConfig
   var connectionString = localConfig
   if(process){
-    connectionString = process.env.SQLCONNSTR_JobTotalDev
+    if(process.env.SQLCONNSTR_JobTotalDev)
+      connectionString = process.env.SQLCONNSTR_JobTotalDev
   }
   // console.log('socket.handshake.query', socket.handshake.query)
   console.log('connectionString', connectionString)
