@@ -55,8 +55,9 @@ $(function () {
 
   const getHostWithPort = () =>{
     let port
-    if(process && process.env.PORT)
-      port = ':'+process.env.PORT
+    if(process)
+      if(process.env.PORT)
+        port = ':'+process.env.PORT
     return window.location.hostname + port
   }
 

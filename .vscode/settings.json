@@ -3,5 +3,6 @@
     "node_modules{,/**}",
     ".vscode{,/**}"
   ],
-  "appService.deploySubpath": "."
+  "appService.deploySubpath": ".",
+  "appService.defaultWebAppToDeploy": "/subscriptions/50428806-61e6-4f91-848a-9f5981ab52e9/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/jobTotalChat"
 }
