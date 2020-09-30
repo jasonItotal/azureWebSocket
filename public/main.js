@@ -54,11 +54,11 @@ $(function () {
   }
 
   const getHostWithPort = () =>{
-    let port
-    if(process)
-      if(process.env.PORT)
-        port = ':'+process.env.PORT
-    return window.location.hostname + port
+    let port = '3000'
+    let suffix = ''
+    // suffix = + ':' + port
+
+    return window.location.hostname +suffix
   }
 
   // Sets the client's username
