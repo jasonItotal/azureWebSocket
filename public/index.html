@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socket.IO Chat Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul class="pages">
+      <li class="chat page">
+        <div class="chatArea">
+          <ul class="messages"></ul>
+        </div>
+        <input class="inputMessage" placeholder="Type here..." />
+      </li>
+      <li class="login page">
+        <div class="form">
+          <h3 class="title">Username</h3>
+          <input class="usernameInput" type="text" value="67511992" />
+        </div>
+        <div class="form">
+          <h3 class="title">Password</h3>
+          <input class="passwordInput" type="text" value="1139saaoda" />
+        </div>
+        <div class="form">
+          <h3 class="title">Chat ID</h3>
+          <input class="chatInput" type="text" value="1" />
+        </div>
+        <!-- <div class="form">
+        <h3 class="title">User Token</h3>
+        <input class="tokenInput" type="text" maxlength="14" />
+      </div> -->
+      </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
