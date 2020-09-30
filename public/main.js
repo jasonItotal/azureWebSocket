@@ -53,6 +53,13 @@ $(function () {
     log(message)
   }
 
+  const getHostWithPort = () =>{
+    let port
+    if(process && process.env.PORT)
+      port = ':'+process.env.PORT
+    return window.location.hostname + port
+  }
+
   // Sets the client's username
   const setInput = () => {
     username = cleanInput($usernameInput.val().trim());
@@ -71,8 +78,8 @@ $(function () {
         console.log('response',response)
 
         let token = response.data.data.token
-
-        socket = io({
+        let host = getHostWithPort()
+        socket = io(host,{
           transports: ['websocket'],
           query: {
             token: token,
